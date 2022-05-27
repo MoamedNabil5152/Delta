@@ -1,0 +1,31 @@
+
+
+<form [formGroup]="bookingSeat">
+
+  <mat-form-field [appearance]="'outline'" class="w-100 p-2 my-2">
+  <mat-label>Enter your Name</mat-label>
+  <input formControlName="name" type="text" matInput />
+  <mat-error *ngIf="bookingSeat.get('name').invalid" class="mt-4">{{getNameErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<mat-form-field [appearance]="'outline'" class="w-100 p-2 my-2">
+  <mat-label>Enter your email</mat-label>
+  <input formControlName="email" type="text" matInput />
+  <mat-error *ngIf="bookingSeat.get('email').invalid" class="mt-4">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<mat-form-field [appearance]="'outline'" class="w-100 p-2 my-2 ">
+  <mat-label>Enter your Phone Number </mat-label>
+  <input formControlName="phone" type="text" matInput />
+  <mat-error *ngIf="bookingSeat.get('phone').invalid" class="mt-4">{{getPhoneErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- <mat-form-field [appearance]="'outline'" class="w-100 p-2 my-1">
+  <mat-label>Enter your email</mat-label>
+  <input formControlName="email" type="text" matInput />
+  <mat-error *ngIf="bookingSeat.get('email').invalid" class="mt-4">{{getErrorMessage()}}</mat-error>
+</mat-form-field> -->
+<div class="col-3 d-flex justify-content-center">
+  <button class="btn btn-primary search py-3 px-3" (click)="submitForm()" [disabled]="!bookingSeat.valid">Booking Seat</button>
+</div>
+</form>

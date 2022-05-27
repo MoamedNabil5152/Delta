@@ -1,0 +1,121 @@
+$color: #f68b1e;
+
+// three dots animation for ( App Rote )
+
+.preloader-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #242931;
+}
+
+.cdiv {
+  width: 15rem;
+  height: 15rem;
+}
+.rot {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-right: 0.3rem solid var(--color);
+  border-radius: 50%;
+  animation: preloader 2s linear infinite;
+}
+@keyframes preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.lh {
+  color: var(--color);
+  font-family: "Pattaya", sans-serif;
+  position: relative;
+  top: 48%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+// Floating social media
+.floating-container {
+  position: fixed;
+  top: 30%;
+  left: 5px;
+  width: 40px;
+  min-height: 200px;
+  z-index: 4;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  .floating-social-visible {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0;
+    .icon {
+      height: 40px;
+      margin: 3px 0;
+      font-size: 20px;
+      border-radius: 50%;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: all 0.5s ease-in-out;
+      i {
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .icon:hover {
+      transform: rotateY(359deg);
+      opacity: 1;
+    }
+  }
+
+  .floating-social-hide {
+    position: relative;
+    top: 30%;
+    left: -60px;
+    transition: all 0.5s ease-in-out;
+
+    .icon {
+      height: 40px;
+      margin: 3px 0;
+      font-size: 20px;
+      border-radius: 50%;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: all 0.5s ease-in-out;
+      i {
+        color: white;
+      }
+    }
+    .icon:hover {
+      transform: rotateY(359deg);
+      opacity: 1;
+    }
+  }
+  .toggleFloatingSocial {
+    position: relative;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 4;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    opacity: 0.3;
+    .toggle-social {
+      height: 30px;
+      // margin-top: 5px;
+      font-size: 15px;
+      color: gray;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  .toggleFloatingSocial:hover {
+    opacity: 1;
+  }
+}

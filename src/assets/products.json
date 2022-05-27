@@ -1,0 +1,172 @@
+{
+  "trips": [
+    {
+      "from": "cairo",
+      "to": "sharm elshiekh",
+      "dateFrom": "30/6/2022 01 : 00 PM",
+      "dateTo": "30/6/2022 02 : 00 PM",
+      "planId": 1,
+      "tripId": 1
+    },
+    {
+      "from": "cairo",
+      "to": "Aswan",
+      "dateFrom": "1/7/2022 10 : 00 PM",
+      "dateTo": "1/7/2022 12 : 00 PM",
+      "planId": 2,
+      "tripId": 2
+    }
+  ],
+  "plane": [
+    {
+      "id": 1,
+      "name": "Malmo"
+    },
+    {
+      "id": 2,
+      "name": "Mancio"
+    }
+  ],
+  "seats": [
+    {
+      "id": 5,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 1,
+      "planId": 1
+    },
+    {
+      "id": 6,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 2,
+      "planId": 1
+    },
+    {
+      "id": 7,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 3,
+      "planId": 1
+    },
+    {
+      "id": 8,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 4,
+      "planId": 1
+    },
+    {
+      "id": 9,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 5,
+      "planId": 1
+    },
+    {
+      "id": 10,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 6,
+      "planId": 1
+    },
+    {
+      "id": 11,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 7,
+      "planId": 1
+    },
+    {
+      "id": 12,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 8,
+      "planId": 1
+    },
+    {
+      "id": 13,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 9,
+      "planId": 1
+    },
+    {
+      "id": 14,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 10,
+      "planId": 1
+    },
+    {
+      "id": 15,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 1,
+      "planId": 2
+    },
+    {
+      "id": 16,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 2,
+      "planId": 2
+    },
+    {
+      "id": 17,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 3,
+      "planId": 2
+    },
+    {
+      "id": 18,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 4,
+      "planId": 2
+    },
+    {
+      "id": 19,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 5,
+      "planId": 2
+    },
+    {
+      "id": 20,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 6,
+      "planId": 2
+    },
+    {
+      "id": 21,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 7,
+      "planId": 2
+    },
+    {
+      "id": 22,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 8,
+      "planId": 2
+    },
+    {
+      "id": 23,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 9,
+      "planId": 2
+    },
+    {
+      "id": 24,
+      "status": "Available",
+      "name" : "",
+      "seatNum": 10,
+      "planId": 2
+    }
+  ]
+}

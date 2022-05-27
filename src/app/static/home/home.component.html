@@ -1,0 +1,110 @@
+  <div class="container-fluid animate__animated animate__fadeInDown">
+    <mat-card class="searchCard mt-2 p-2">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <mat-form-field [appearance]="'outline'" class="w-100">
+            <mat-label>From</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="From">
+              <mat-option
+                *ngFor="let elem of From"
+                [value]=" elem.viewValue"
+                (click)="selectFrom(elem)"
+              >
+                {{ elem.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field [appearance]="'outline'" class="w-100" >
+            <mat-label>To</mat-label>
+            <mat-select [(ngModel)]="selectedValue2" name="To" [disabled]="enableToSelect">
+              <mat-option *ngFor="let elem of to" [value]=" elem.viewVal" (click)="selectTo(elem , elem.planId)">
+                {{ elem.viewVal }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary search py-3 px-5"(click)="searchTrips()" [disabled]="enableSearch">Search</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <section class="py-3 d-flex justify-content-center align-items-center ">
+    <div class="container-fluid" *ngFor="let elem of filteredTrips ">
+      <!--  -->
+      <div class="row  ">
+        <!-- plane card -->
+        <div class="col-xl-9  p-3 m-auto animate__animated animate__rubberBand">
+          <div class="card  p-3">
+            <!-- card Header -->
+            <div class="row">
+              <div class="col-5">
+                <img
+                  class="img-fluid"
+                  width="100"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuXD1FVYw33Zg6xTIzR3A5YG6jwNlQDdqMSA&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="col-7 d-flex align-items-center">
+                <h2 class="text-capitalize font-weight-bold">ELDELTA</h2>
+              </div>
+            </div>
+            <!-- card body  -->
+            <hr />
+
+            <div class="card-body">
+              <div class="row text-center">
+                <div class="col-5 align-items-center mt-5">
+                  <h2 class="card-title text-capitalize font-weight-bold">{{elem.from}}</h2>
+                  <span class="font-weight-bolder">{{elem.dateFrom}}</span>
+                </div>
+                <div class="col-2 mb-2">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJkX26jJyhUbfG-bMvJ03kycWaNe91o8dzkNM41gL6MeVEaGbN-VGnUupjuN98Mhm_lMo&usqp=CAU" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                </div>
+                <div class="col-5 mt-5">
+                  <h2 class="card-title text-capitalize font-weight-bold">{{elem.to}}</h2>
+                  <span class="font-weight-bolder">{{elem.dateTo}}</span>
+
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary search py-3 px-3" (click)="openDialog(elem)">View Seats</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end of plane Card  -->
+
+      </div>
+      <div class="row">
+        <div class="col-xl-9 m-auto  p-3">
+          <div class="col-12 text-center">
+            <h2>Number Of Free Seats ({{newchart.length ? newchart.length : chartData.length}})</h2>
+          </div>
+          <mat-card>
+            <apx-chart
+
+            [series]="chartOptions.series"
+            [colors]="chartOptions.colors"
+            [grid]="chartOptions.grid"
+            [chart]="chartOptions.chart"
+            [xaxis]="chartOptions.xaxis"
+            [yaxis]="chartOptions.yaxis"
+            [legend]="chartOptions.legend"
+          >
+          </apx-chart>
+
+          </mat-card>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+

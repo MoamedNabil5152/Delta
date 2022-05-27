@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+<div class="col-12 d-flex justify-content-end">
+
+    <mat-icon class="text-danger cursor" (click)="closeDialog()" >cancel</mat-icon>
+
+
+</div>
+    <div class="col-12 card py-4 my-2" *ngFor="let elem of seats;let i = index" [ngClass]="{'mat-elevation-z4' : elem.status == 'Unavailable' , 'disableCard' : elem.status == 'Unavailable'}" >
+      <div class="card-body">
+
+      <div class="row">
+        <div class="col-12" *ngIf="elem.status == 'Unavailable'">
+          <h2 class="text-center booked">Seat is Booked</h2>
+          <hr>
+        </div>
+        <div class="col-md-4 ">
+          <img class=" img-fluid rounded"  src="https://media.herworld.com/public/plane%20seats%20D.jpg" [class.disImg]="elem.status == 'Unavailable'"/>
+        </div>
+        <div class="col-md-5  d-flex align-items-center justify-content-center">
+          <div [class.changeColor]="elem.status == 'Unavailable'">
+            <p class="seatInfo" *ngIf="elem.name">Name: {{elem.name}}</p>
+            <p class="seatInfo">Seat number : {{elem.seatNum}}</p>
+            <p class="seatInfo">Status : {{elem.status}}</p>
+
+          </div>
+
+      </div>
+
+      <div class="col-3 d-flex align-items-center justify-content-center" *ngIf="elem.status == 'Available'">
+        <button class="btn btn-primary search py-3 px-3" (click)="openDialog(elem)">Booking Seat</button>
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center" *ngIf="elem.status == 'Unavailable'">
+        <button class="delete py-3 px-3" (click)="deleteTicket(i , elem)">Delete Ticket</button>
+      </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
