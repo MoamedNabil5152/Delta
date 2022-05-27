@@ -4,5 +4,5 @@
 
 Just npm install ... have fun 😊✌
 
-### Made by [Mohamed NAbil]
+### Made by [Mohamed Nabil]
 
